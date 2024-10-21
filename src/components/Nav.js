@@ -1,7 +1,7 @@
 function Nav() {
     return (
-        <nav className="flex">
-            <a href="#">Home</a>
+        <nav className="flex" aria-label="Main Navigation">
+            <a href="#" aria-current="page">Home</a>
             <a href="#">About</a>
             <a href="#">Menu</a>
             <a href="#">Reservations</a>

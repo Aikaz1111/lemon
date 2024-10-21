@@ -3,10 +3,10 @@ import Nav from "./Nav.js";
 
 function Footer() {
     return (
-        <footer>
+        <footer role="contentinfo">
             <div className="container">
                 <div className="footer__content flex">
-                    <img src="" alt="" />
+                    <img src="" alt="Restaurant Logo" />
                     <div className="footer__col">
                         <div className="footer__title">Menu</div>
                         <Nav></Nav>

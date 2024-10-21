@@ -3,11 +3,11 @@ import Nav from "./Nav";
 
 function Header() {
     return (
-        <header>
+        <header role="banner">
             <div className="container">
                 <div className="header__content flex">
                     <a href="#" className='header__logo'>
-                        <img src={logo} alt="" />
+                        <img src={logo} alt="Restaurant logo" />
                     </a>
                     <Nav></Nav>
                 </div>

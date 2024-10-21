@@ -5,10 +5,10 @@ import dish3 from '../assets/dish3.jpg';
 
 function Specials() {
     return (
-        <section className="specials">
+        <section className="specials" aria-labelledby="specials-title">
             <div className="container">
                 <div className="specials__info flex">
-                    <h2 className="section__title">Specials</h2>
+                    <h2 className="section__title" id="specials-title">Specials</h2>
                     <a href="#" className="btn btn_green">Online Menu</a>
                 </div>
                 <div className="specials__items flex">

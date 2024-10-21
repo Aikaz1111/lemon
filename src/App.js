@@ -25,7 +25,8 @@ function App() {
 
   const [availableTimes, dispatch] = useReducer(timeReducer, initialTimeState);
 
-  const updateTimes = (date) => {
+  const updateTimes = (dateString) => {
+    const date = new Date(dateString);
     const times = fetchAPI(date); // Получаем доступные временные слоты на основе выбранной даты
     dispatch({ type: 'SET_AVAILABLE_TIMES', payload: times }); // Обновляем состояние
   };
