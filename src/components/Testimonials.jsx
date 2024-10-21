@@ -5,10 +5,12 @@ function Testimonials() {
         <section className="testimonials">
             <div className="container">
                 <h2 className="title">Testimonials</h2>
-                <Testimonial></Testimonial>
-                <Testimonial></Testimonial>
-                <Testimonial></Testimonial>
-                <Testimonial></Testimonial>
+                <div className="testimonials__items flex">
+                    <Testimonial></Testimonial>
+                    <Testimonial></Testimonial>
+                    <Testimonial></Testimonial>
+                    <Testimonial></Testimonial>
+                </div>
             </div>
         </section>
     );

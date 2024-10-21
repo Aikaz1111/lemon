@@ -1,3 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-family: 'Karla', sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +47,210 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 890px;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header__content {
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  width: 200px;
+}
+
+.header__logo img {
+  width: 100%;
+  display: block;
+}
+
+nav.flex {
+  width: auto;
+  padding-left: 20px;
+  justify-content: flex-end;
+}
+
+nav.flex a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: all ease 0.3s;
+  flex: initial;
+}
+
+nav a:hover {
+  color: #495E57;
+}
+
+.hero {
+  background: #495E57;
+  color: #fff;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero__info {
+  flex: 1;
+}
+
+.hero__img {
+  flex: 1;
+}
+
+.hero__title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Markazi Text', sans-serif;
+}
+
+.hero__location {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-family: 'Markazi Text', sans-serif;
+}
+
+.hero__description {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 12px 32px;
+  text-decoration: none;
+  transition: all ease 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn_yellow {
+  background: #F4CE14;
+  color: #000;
+}
+
+.btn_yellow:hover {
+  background: #DCB912;
+}
+
+.btn_green {
+  background: #495E57;
+  color: #ffffff;
+}
+
+.btn_green:hover {
+  background: #42554E;
+}
+
+.hero__img img {
+  border-radius: 16px;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section__title {
+  color: #000;
+  font-family: 'Markazi Text', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.specials__info {
+  align-items: center;
+}
+
+.specials__info .btn {
+  margin-bottom: 32px;
+}
+
+.card {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #D9D9D9;
+}
+
+.card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__info {
+  padding: 24px;
+  gap: 16px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card__price {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card__description {
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+}
+
+.card__delivery {
+  text-decoration: none;
+  display: block;
+  color: #495E57;
+  font-weight: 600;
+  position: relative;
+}
+
+.card__delivery i {
+  position: relative;
+  left: 0;
+  transition: all ease 0.5s;
+  opacity: 1;
+}
+
+.card__delivery:hover i {
+  left: 40px;
+  opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .flex {
+    display: block;
   }
 }

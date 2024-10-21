@@ -1,12 +1,17 @@
-import logo from '../assets/Logo.svg'
+import logo from '../assets/Logo.svg';
+import Nav from "./Nav";
 
 function Header() {
     return (
         <header>
-            <a href="#">
-                <img src={logo} alt="" />
-            </a>
-            <Nav></Nav>
+            <div className="container">
+                <div className="header__content flex">
+                    <a href="#" className='header__logo'>
+                        <img src={logo} alt="" />
+                    </a>
+                    <Nav></Nav>
+                </div>
+            </div>
         </header>
     );
 }

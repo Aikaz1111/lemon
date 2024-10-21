@@ -1,6 +1,6 @@
 function Nav() {
     return (
-        <nav>
+        <nav className="flex">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Menu</a>
