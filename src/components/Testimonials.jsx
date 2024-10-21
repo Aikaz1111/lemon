@@ -4,7 +4,7 @@ function Testimonials() {
     return (
         <section className="testimonials">
             <div className="container">
-                <h2 className="title">Testimonials</h2>
+                <h2 className="section__title">Testimonials</h2>
                 <div className="testimonials__items flex">
                     <Testimonial></Testimonial>
                     <Testimonial></Testimonial>

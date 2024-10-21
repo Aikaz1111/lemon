@@ -249,6 +249,14 @@ section {
   opacity: 0;
 }
 
+/* Booking page */
+
+form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px
+}
+
 @media screen and (max-width: 900px) {
   .flex {
     display: block;
