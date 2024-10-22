@@ -8,32 +8,32 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useReducer, useEffect  } from 'react';
 import { fetchAPI, submitAPI } from './api';
+import initializeTimes from './utils/InitializeTimes';
 
 function App() {
 
   const timeReducer = (state, action) => {
     switch (action.type) {
         case 'SET_AVAILABLE_TIMES':
-            return action.payload; // Обновляем состояние с доступным временем
+            return action.payload; 
         default:
             return state;
     }
   };
 
-  const initialTimeState = [];
   const navigate = useNavigate();
 
-  const [availableTimes, dispatch] = useReducer(timeReducer, initialTimeState);
+  const [availableTimes, dispatch] = useReducer(timeReducer, initializeTimes());
 
   const updateTimes = (dateString) => {
     const date = new Date(dateString);
-    const times = fetchAPI(date); // Получаем доступные временные слоты на основе выбранной даты
-    dispatch({ type: 'SET_AVAILABLE_TIMES', payload: times }); // Обновляем состояние
+    const times = fetchAPI(date);
+    dispatch({ type: 'SET_AVAILABLE_TIMES', payload: times });
   };
 
   const submitForm = (formData) => {
-    if (submitAPI(formData)) { // Вызываем submitAPI с переданными данными формы
-        navigate('/confirmed'); // Навигируем на страницу подтверждения
+    if (submitAPI(formData)) {
+        navigate('/confirmed');
     }
 };
 

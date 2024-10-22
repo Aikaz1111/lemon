@@ -6,6 +6,11 @@
   font-family: 'Karla', sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 img {
   display: block;
   width: 100%;
@@ -63,7 +68,6 @@ img {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -86,14 +90,20 @@ header {
   display: block;
 }
 
-nav.flex {
+header nav {
   width: auto;
   padding-left: 20px;
   justify-content: flex-end;
+  gap: 30px;
 }
 
-nav.flex a {
-  display: block;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+header nav ul li a {
   text-decoration: none;
   color: #000;
   font-size: 16px;
@@ -105,12 +115,20 @@ nav a:hover {
   color: #495E57;
 }
 
+.header__button {
+  display: none;
+}
+
 .hero {
   background: #495E57;
   color: #fff;
   text-align: left;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.hero__content {
+  gap: 30px;
 }
 
 .hero__info {
@@ -149,6 +167,9 @@ nav a:hover {
   transition: all ease 0.3s;
   font-size: 16px;
   font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn_yellow {
@@ -191,8 +212,16 @@ section {
   align-items: center;
 }
 
+.specials__info .section__title {
+  margin-right: 20px;
+}
+
 .specials__info .btn {
   margin-bottom: 32px;
+}
+
+.specials__items {
+  gap: 30px;
 }
 
 .card {
@@ -213,7 +242,8 @@ section {
   gap: 16px;
 }
 
-.card__title {
+.card__title,
+.testimonial__name {
   font-size: 18px;
   font-weight: 700;
 }
@@ -223,7 +253,8 @@ section {
   font-weight: 400;
 }
 
-.card__description {
+.card__description,
+.testimonial__text {
   text-align: left;
   font-size: 16px;
   width: 100%;
@@ -249,16 +280,344 @@ section {
   opacity: 0;
 }
 
-/* Booking page */
-
-form {
-  display: grid;
-  max-width: 200px;
-  gap: 20px
+.testimonials__items {
+  gap: 30px;
 }
 
-@media screen and (max-width: 900px) {
-  .flex {
+.testimonial {
+  background: #F0F0F0;
+  flex: 1;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.testimonial__photo img {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+.testimonial__rating {
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  color: #F4CE14;
+}
+
+.testimonial__text {
+  text-align: center;
+}
+
+/* About */
+
+.about__content {
+  gap: 30px;
+}
+
+.about__info {
+  flex: 1;
+}
+
+.about__info .section__title {
+  margin-bottom: 8px;
+}
+
+.about__location {
+  text-align: left;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.about__description {
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.about__images {
+  flex: 1;
+}
+
+.about__images img {
+  width: 70%;
+  border-radius: 16px;
+}
+
+.about__images img:nth-child(1) {
+  margin-bottom: -30px;
+  margin-left: auto;
+}
+
+/*  Footer  */
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #495E57;
+}
+
+.footer__content {
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.footer__logo {
+  width: 50px;
+  margin-right: 100px;
+}
+
+.footer__col {
+  flex: 1;
+  text-align: left;
+}
+
+.footer__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer__col ul {
+  list-style: none;
+}
+
+.footer__col ul li {
+  margin-bottom: 8px;
+}
+
+.footer__col ul li a {
+  display: inline;
+  color: #fff;
+  transition: all ease 0.3s;
+  text-decoration: none;
+}
+
+.footer__col ul li a:hover {
+  color: #F4CE14;
+}
+
+.footer__col p {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Booking page */
+
+.form {
+  width: 540px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+
+.form__item {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.form__item label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.form__item input,
+.form__item select {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #495E57;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 992px) {
+	.container {
+		width: 750px;
+	}
+
+  header nav ul {
+    gap: 20px;
+  }
+
+  .hero__info {
+    flex: 2;
+  }
+
+  .card__img {
+    height: 150px;
+  }
+
+  .card__info {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .card__price {
+    font-size: 16px;
+  }
+
+  .testimonial {
+    padding: 16px;
+  }
+
+  .testimonial__photo img {
+    margin-bottom: 12px;
+  }
+
+  .footer__logo {
+    margin-right: 30px;
+  }
+
+  
+
+  
+
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 540px;
+	}
+
+  .header__button {
     display: block;
   }
+
+  header {
+    position: relative;
+    z-index: 10;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background: #fff;
+    left: 0;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  header nav.visible {
+    max-height: 500px;
+  }
+
+  header nav.hidden {
+    max-height: 0;
+  }
+
+  header nav ul {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 12px;
+    text-align: left;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+  }
+
+  header nav ul li {
+    width: 100%;
+  }
+
+  .hero__content {
+    display: block;
+  }
+
+  .hero__info {
+    margin-bottom: 24px;
+  }
+
+  .specials__items {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    flex: initial;
+  }
+
+  .testimonials__items {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .testimonial {
+    width: calc(50% - 10px);
+    flex: initial;
+  }
+
+  .about__content {
+    display: block;
+  }
+
+  .about__images {
+    padding-top: 16px;
+  }
+
+  .footer__content {
+    flex-wrap: wrap;
+  }
+
+  .footer__col {
+    width: calc(50% - 15px);
+    flex: initial;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+  .hero__title {
+    font-size: 44px;
+  }
+
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .section__title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .specials__info .btn {
+    margin-bottom: 24px;
+  }
+
+  .footer__col {
+    width: 100%;
+  }
+
 }
